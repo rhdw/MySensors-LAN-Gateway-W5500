@@ -26,6 +26,11 @@ Compiled with Arduino 1.8.8
 Processor: ATmega328P (Old Bootloader)  
 "Ethernet2.h" by Various Version 1.0.4  
 "MySensors.h" by The MySensors Team Version 2.3.1
+***
+
+My Schematics  
+![png](https://user-images.githubusercontent.com/21333959/50541348-0c468100-0ba4-11e9-853b-54b6de234a19.png)
+***
 
 ```ino
 /*----------------------------------------------
