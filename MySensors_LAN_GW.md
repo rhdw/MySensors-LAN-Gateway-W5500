@@ -15,6 +15,8 @@ Connection list:
 | GND   | GND   | GND   | GND  | sw  |
 | VIN   | +5V   |       |      |     |
 | VOUT  |       | 3.3V  | V+   | rt  |
+|       | 5     |       | CE   | gr  |
+|       | 6     |       | CSN  | ge  |
 |       | 10    | SCS   |      | or  |
 |       | 11    | MOSI  |      | bl  |
 |       | 12    | MISO  |      | vio |
