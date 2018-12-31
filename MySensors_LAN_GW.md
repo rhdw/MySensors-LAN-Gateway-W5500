@@ -10,7 +10,7 @@ Used parts:
 Connection list:
 ( the wire color is only required for the breadboard )
 
-| HT7333-A | Arduino NANO | WizNET W5500 | NRF24L01+ | wire color |
+| HT7333-A | NANO | W5500 | NRF24L01+ | wire color |
 | ----- | ----- | ----- | ----- | ----- |
 | GND   | GND   | GND   | GND  | sw  |
 | VIN   | +5V   |       |      |     |
@@ -24,7 +24,6 @@ Connection list:
 |       | A0    |       | SCK  | gn  |
 |       | A1    |       | MOSI | bl  |
 |       | A2    |       | MISO | vio |
-***VIN
 
 Compiled with Arduino 1.8.8  
 Processor: ATmega328P (Old Bootloader)  
