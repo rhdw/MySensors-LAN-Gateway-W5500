@@ -1,4 +1,4 @@
-# MySensors LAN Gateway W5500
+    MISO # MySensors LAN Gateway W5500
 > from rhdw, Dez. 2018
 
 Used parts:
@@ -10,17 +10,19 @@ Used parts:
 Connection list:
 ( the wire color is only required for the breadboard )
 
-| Arduino NANO | WizNET W5500 | NRF24L01+ | wire color |
-| ----- | ----- | ----- | ----- |
-| GND | GND | GND | sw |
-| 3V3 | 3.3V | V+ | rt |
-| 13 | SCLK | SCK | gn |
-| 12 | MISO | MISO | vio | bl | or |
-| 11 | MOSI | MOSI | bl | or |
-| 10 | SCS |  | or |
-| 6 |  | CSN | gr |
-| 5 |  | CE | ge 
-***
+| HT7333-A | Arduino NANO | WizNET W5500 | NRF24L01+ | wire color |
+| ----- | ----- | ----- | ----- | ----- |
+| GND   | GND   | GND   | GND  | sw  |
+| VIN   | +5V   |       |      |     |
+| VOUT  |       | 3.3V  | V+   | rt  |
+|       | 10    | SCS   |      | or  |
+|       | 11    | MOSI  |      | bl  |
+|       | 12    | MISO  |      | vio |
+|       | 13    | SCLK  |      | gn  |
+|       | A0    |       | SCK  | gn  |
+|       | A1    |       | MOSI | bl  |
+|       | A2    |       | MISO | vio |
+***VIN
 
 Compiled with Arduino 1.8.8  
 Processor: ATmega328P (Old Bootloader)  
@@ -38,11 +40,11 @@ My Schematics
   ----------------------------------------------
   DESCRIPTION
   My Ethernet Gateway for Domoticz
-  Arduino Nano + WitNET W5500 + NRF24L01+
+  Arduino Nano + WizNET W5500 + NRF24L01+
   ----------------------------------------------
   REVISION HISTORY
   ----------------------------------------------
-  v1.0 - 28.12.2018
+  v1.1 - 31.12.2018
 */
 
 #define MY_DEBUG
@@ -57,6 +59,11 @@ My Schematics
 // IMPORTANT: Enable gateway ethernet module type ENC28J60
 #define MY_GATEWAY_ENC28J60
 
+#define MY_SOFTSPI
+#define MY_SOFT_SPI_SCK_PIN 14
+#define MY_SOFT_SPI_MISO_PIN 16
+#define MY_SOFT_SPI_MOSI_PIN 15
+
 #define MY_IP_ADDRESS 192,168,1,2
 
 // IMPORTANT: Change the MAC Address to fit on your network
@@ -69,46 +76,15 @@ My Schematics
 // The port to keep open on node server mode
 #define MY_PORT 5003
 
-// Enable inclusion mode
-#define MY_INCLUSION_MODE_FEATURE
-// Enable Inclusion mode button on gateway
-//#define MY_INCLUSION_BUTTON_FEATURE
-// Set inclusion mode duration (in seconds)
-#define MY_INCLUSION_MODE_DURATION 60
-// Digital pin used for inclusion mode button
-//#define MY_INCLUSION_MODE_BUTTON_PIN  3
-
-// Set blinking period
-#define MY_DEFAULT_LED_BLINK_PERIOD 300
-
-// Flash leds on rx/tx/err
-// Uncomment to override default HW configurations
-//#define MY_DEFAULT_ERR_LED_PIN 7  // Error led pin
-//#define MY_DEFAULT_RX_LED_PIN  8  // Receive led pin
-//#define MY_DEFAULT_TX_LED_PIN  9  // Transmit led pin
-
-#include <SPI.h>
 #include <Ethernet2.h>
 #include <MySensors.h>
 
-// IMPORTANT: Ethernet configuration
-byte mac[] = { MY_MAC_ADDRESS };
-byte ip[] = { MY_IP_ADDRESS };
+//---------------------------------------------------------
+void setup() {}
 
 //---------------------------------------------------------
-void setup()
-{
-  // IMPORTANT
-  Ethernet.begin(mac, ip);
-}
+void presentation() {}
 
 //---------------------------------------------------------
-void presentation()
-{
-}
-
-//---------------------------------------------------------
-void loop()
-{
-}
+void loop() {}
 ```
