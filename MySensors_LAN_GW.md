@@ -1,8 +1,8 @@
-    MISO # MySensors LAN Gateway W5500
+# MySensors LAN Gateway W5500
 > from rhdw, Dez. 2018
 
 Used parts:
-* Arduino NANO
+* Arduino NANO (clone with CH340 USB Chip)
 * WizNET W5500 Module
 * NRF24L01+ Transceiver Module
 ***
@@ -31,7 +31,7 @@ Processor: ATmega328P (Old Bootloader)
 "MySensors.h" by The MySensors Team Version 2.3.1
 ***
 
-My Schematics  
+Schematics  
 ![en_gw](https://user-images.githubusercontent.com/21333959/50575213-224d7f00-0dfa-11e9-8db3-5578b2e287d1.png)
 ***
 
