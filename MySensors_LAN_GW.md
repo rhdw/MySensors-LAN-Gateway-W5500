@@ -32,7 +32,7 @@ Processor: ATmega328P (Old Bootloader)
 ***
 
 My Schematics  
-![png](https://user-images.githubusercontent.com/21333959/50541348-0c468100-0ba4-11e9-853b-54b6de234a19.png)
+![en_gw](https://user-images.githubusercontent.com/21333959/50575213-224d7f00-0dfa-11e9-8db3-5578b2e287d1.png)
 ***
 
 ```ino
