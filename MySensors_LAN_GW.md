@@ -36,16 +36,36 @@ My Schematics
 ***
 
 ```ino
-/*----------------------------------------------
-  MySensors_EN_GW_W5500.ino
-  ----------------------------------------------
-  DESCRIPTION
-  My Ethernet Gateway for Domoticz
-  Arduino Nano + WizNET W5500 + NRF24L01+
-  ----------------------------------------------
-  REVISION HISTORY
-  ----------------------------------------------
-  v1.1 - 31.12.2018
+/*
+ * The MySensors Arduino library handles the wireless radio link and protocol
+ * between your home built sensors/actuators and HA controller of choice.
+ * The sensors forms a self healing radio network with optional repeaters. Each
+ * repeater and gateway builds a routing tables in EEPROM which keeps track of the
+ * network topology allowing messages to be routed to nodes.
+ *
+ * Created by Henrik Ekblad <henrik.ekblad@mysensors.org>
+ * Copyright (C) 2013-2018 Sensnology AB
+ * Full contributor list: https://github.com/mysensors/MySensors/graphs/contributors
+ *
+ * Documentation: http://www.mysensors.org
+ * Support Forum: http://forum.mysensors.org
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * version 2 as published by the Free Software Foundation.
+ *
+ *******************************
+ *
+ * REVISION HISTORY
+ * Version 1.0 - Henrik EKblad
+ * Contribution by rhdw, 31.12.2018
+ *
+ *
+ * DESCRIPTION
+ * The EthernetGateway sends data received from sensors to the ethernet link.
+ * The gateway also accepts input on ethernet interface, which is then sent out to the radio network.
+ * I'm using this Ethernet Gateway for Domoticz
+ * Parts: Arduino Nano + WizNET W5500 + NRF24L01+
 */
 
 #define MY_DEBUG
