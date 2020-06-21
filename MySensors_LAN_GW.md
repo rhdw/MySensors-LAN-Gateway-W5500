@@ -1,6 +1,8 @@
 # MySensors LAN Gateway W5500
 > from rhdw, Dez. 2018
 
+***Update 2020: Since startup 2018 error free in use as gateway to Domoticz***
+
 Used parts:
 * Arduino NANO (clone with CH340 USB Chip)
 * WizNET W5500 Module
